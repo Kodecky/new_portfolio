@@ -54,6 +54,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+      {/* <img src={`${process.env.PUBLIC_URL}/images/about-image.jpg`} alt="O nas" /> */}
     </section>
   );
 };

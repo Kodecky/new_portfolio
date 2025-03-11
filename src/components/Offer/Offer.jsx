@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Offer.scss';
 
 const Offer = () => {
@@ -8,19 +7,19 @@ const Offer = () => {
       title: 'Strony WordPress',
       description: 'Nowoczesne i responsywne strony internetowe na WordPress, dostosowane do Twoich potrzeb i łatwe w zarządzaniu. Optymalizacja pod kątem SEO oraz dostępności, a także pełne wsparcie techniczne.',
       technologies: [],
-      image: '/images/wordpress.svg'
+      image: `${process.env.PUBLIC_URL}/images/wordpress.svg`
     },
     {
       title: 'Strony Wizytówki',
       description: 'Estetyczne i nowoczesne strony wizytówki, które skutecznie prezentują Twoją działalność w internecie. Strona będzie responsywna, szybka i zoptymalizowana pod SEO i dostępności, zapewniając profesjonalny wizerunek. Oferuję również wsparcie techniczne i możliwość późniejszej rozbudowy.',
       technologies: [],
-      image: '/images/web-design.svg'
+      image: `${process.env.PUBLIC_URL}/images/web-design.svg`
     },
     {
       title       : 'Marka w Excelu',
       description : 'Zaawansowane makra w Excelu przy użyciu VBA, które automatyzują powtarzalne zadania i usprawniają pracę. Tworzę spersonalizowane rozwiązania dopasowane do Twoich potrzeb, poprawiające efektywność i oszczędzające czas. O wszelkich zmianach w Twoich plikach, np. kończącym się czasie na wykonanie zadania, możesz być automatycznie informowany mailem.',
       technologies: [],
-      image       : '/images/file-excel-full.svg'
+      image       : `${process.env.PUBLIC_URL}/images/file-excel-full.svg`
     }
   ];
 

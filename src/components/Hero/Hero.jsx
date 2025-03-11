@@ -13,7 +13,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img 
-            src="/images/profile-image.png" 
+            src={`${process.env.PUBLIC_URL}/images/profile-image.png`}
             alt="Damian Pawela"
           />
         </motion.div>
