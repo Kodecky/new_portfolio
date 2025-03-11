@@ -5,7 +5,7 @@ import './Footer.scss';
 const Footer = () => {
   const menuItems = [
     { title: 'O mnie', to: 'about' },
-    { title: 'Projekty', to: 'projects' },
+    { title: 'Oferta', to: 'offer' },
     { title: 'Kontakt', to: 'contact' }
   ];
 

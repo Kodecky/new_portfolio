@@ -6,21 +6,21 @@ const Offer = () => {
   const offer = [
     {
       title: 'Strony WordPress',
-      description: 'Aplikacja sklepu internetowego z wykorzystaniem React i Redux. Zawiera koszyk, system płatności i panel administracyjny.',
+      description: 'Nowoczesne i responsywne strony internetowe na WordPress, dostosowane do Twoich potrzeb i łatwe w zarządzaniu. Optymalizacja pod kątem SEO oraz dostępności, a także pełne wsparcie techniczne.',
       technologies: [],
-      image: 'https://via.placeholder.com/600x400?text=E-commerce+App'
+      image: '/images/wordpress.svg'
     },
     {
       title: 'Strony Wizytówki',
-      description: 'Aplikacja do zarządzania zadaniami z funkcją drag & drop, filtrowaniem i kategoryzacją zadań.',
+      description: 'Estetyczne i nowoczesne strony wizytówki, które skutecznie prezentują Twoją działalność w internecie. Strona będzie responsywna, szybka i zoptymalizowana pod SEO i dostępności, zapewniając profesjonalny wizerunek. Oferuję również wsparcie techniczne i możliwość późniejszej rozbudowy.',
       technologies: [],
-      image: 'https://via.placeholder.com/600x400?text=Task+Manager'
+      image: '/images/web-design.svg'
     },
     {
-      title: 'Marka w Excelu',
-      description: 'Aplikacja pogodowa z wykorzystaniem API OpenWeather, pokazująca prognozy i statystyki pogodowe.',
+      title       : 'Marka w Excelu',
+      description : 'Zaawansowane makra w Excelu przy użyciu VBA, które automatyzują powtarzalne zadania i usprawniają pracę. Tworzę spersonalizowane rozwiązania dopasowane do Twoich potrzeb, poprawiające efektywność i oszczędzające czas. O wszelkich zmianach w Twoich plikach, np. kończącym się czasie na wykonanie zadania, możesz być automatycznie informowany mailem.',
       technologies: [],
-      image: 'https://via.placeholder.com/600x400?text=Weather+App'
+      image       : '/images/file-excel-full.svg'
     }
   ];
 

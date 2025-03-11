@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import './Hero.scss';
 
 const Hero = () => {
@@ -24,13 +25,19 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h1>Cześć, jestem Damian</h1>
-          <p>Tworzę intuicyjne interfejsy i nowoczesne aplikacje webowe</p>
+          <p>Tworzę intuicyjne i nowoczesne strony internetowe</p>
           <motion.button 
             className="hero__cta"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Zobacz moją ofertę
+            <Link 
+              to="offer"
+              smooth={true}
+              duration={500}
+            >
+              Zobacz moją ofertę
+            </Link>
           </motion.button>
         </motion.div>
       </div>

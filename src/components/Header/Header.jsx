@@ -17,7 +17,7 @@ const Header = () => {
     <header className="header">
       <div className="header__content">
         <Link to="hero" className="header__logo">
-          Damian Pawela
+          Kodecky
         </Link>
 
         <nav className={`header__nav ${isOpen ? 'active' : ''}`}>
