@@ -1,0 +1,172 @@
+@use '../../styles/variables' as *;
+
+.about {
+  padding: 8rem 2rem;
+  background: lighten($background, 5%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 0% 0%, rgba(75, 156, 226, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 100% 100%, rgba(75, 156, 226, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      color: $text;
+      margin-bottom: 2rem;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: $primary;
+        border-radius: 2px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: rgba($text, 0.8);
+    }
+  }
+
+  &__technologies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  &__tech-item {
+    background: $background;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba($primary, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba($primary, 0.2);
+    }
+
+    svg {
+      font-size: 3rem;
+      color: $primary;
+    }
+
+    span {
+      color: $text;
+    }
+  }
+
+  &__skills {
+    h3 {
+      font-size: 2.2rem;
+      color: #2d3436;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(to right, #4B9CE2, #63b3ed);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 6rem 1.5rem;
+
+    &__text {
+      h2 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.15rem;
+        padding: 0 1rem;
+      }
+    }
+
+    &__technologies {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      padding: 0;
+    }
+
+    &__tech-item {
+      padding: 2rem;
+
+      svg {
+        font-size: 3rem;
+      }
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__text {
+      h2 {
+        font-size: 2.3rem;
+      }
+    }
+
+    &__technologies {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+// Kolory
+$background: #1e272e;
+$primary: #e66767;
+$text: #ffd76e;
+$accent: #e66767;
+
+// Gradienty
+$gradient-primary: linear-gradient(135deg, $primary, darken($primary, 10%));
+$gradient-dark: linear-gradient(135deg, $background, darken($background, 5%)); 

@@ -1,0 +1,136 @@
+@use '../../styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba($background, 0.95);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba($primary, 0.1);
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 73px;
+      left: 0;
+      width: 100%;
+      background: rgba($background, 0.95);
+      backdrop-filter: blur(5px);
+      flex-direction: column;
+      padding: 2rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      border-bottom: 1px solid rgba($primary, 0.1);
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__link {
+    color: $text;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $text;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $text;
+      position: absolute;
+      left: 8px;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        top: 12px;
+      }
+
+      &:nth-child(2) {
+        top: 19px;
+        width: 24px;
+      }
+
+      &:last-child {
+        top: 26px;
+      }
+    }
+
+    &.active {
+      span {
+        &:first-child {
+          transform: rotate(45deg);
+          top: 19px;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(10px);
+          width: 0;
+          transform-origin: center;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 19px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      span {
+        background: $primary;
+      }
+    }
+  }
+} 
